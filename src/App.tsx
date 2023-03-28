@@ -1,11 +1,25 @@
-import React, { ReactNode } from 'react'
+import styled from "styled-components"
 
-const App = ({title=100}:{title:number})=> {
+import "./assets/css/styles.css"
+import Header from "./components/includes/Header"
+import Home from "./components/screens/Home"
+
+const App = ()=> {
   return (
-    <div>
-      <h1>{title}</h1>
-    </div>
+	<>
+		<Header />
+		<Wrapper>
+			<h1>Hello world!</h1>
+			<Home />
+		</Wrapper>
+	</>	
   )
 }
 
 export default App
+
+
+const Wrapper = styled.div`
+  max-width: 1300px;
+  margin: 0 auto;
+`
